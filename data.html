@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Application Tracker - Internship Tracker
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+     <img src="profile.jpg" alt="Photo of me">
+     <h1>
+        Vlad Galatanu - Career Dashboard
+    </h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="data.html">Tracker</a></li>
+            <li><a href="contact.html">Log</a></li>
+            <li><a href="card.html">Card</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <section>
+            <h2>
+                Active Applications Log
+            </h2>
+            <table>
+                <caption>
+                    Tracker of submitted internship and junior developer applications for 2026
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Company</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Date Applied</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+               <tbody>
+                    <tr>
+                        <th scope="row">Bitdefender</th>
+                        <td>Junior Python Developer</td>
+                        <td>2026-03-10</td>
+                        <td>
+                            <select name="status1" id="status1">
+                                <option value="applied">Applied</option>
+                                <option value="under_review">Under Review</option>
+                                <option value="interview" selected>Interview Scheduled</option>
+                                <option value="denied">Denied</option>
+                                <option value="accepted">Accepted</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Continental</th>
+                        <td>Cyber Security Intern</td>
+                        <td>2026-03-18</td>
+                        <td>
+                            <select name="status2" id="status2">
+                                <option value="applied">Applied</option>
+                                <option value="under_review" selected>Under Review</option>
+                                <option value="interview">Interview Scheduled</option>
+                                <option value="denied">Denied</option>
+                                <option value="accepted">Accepted</option>
+                            </select>
+                        </td>
+                    </tr>
+               </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            2026 Vlad Galatanu - Internship & Jobs Dashboard
+        </p>
+    </footer>
+</body>
+</html>

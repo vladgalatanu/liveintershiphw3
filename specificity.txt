@@ -1,0 +1,12 @@
+1. Properties applied:
+- Paragraph A receives its styles from the element selector (p).
+- Paragraph B receives styles from the class selector (.info) which overrides the basic 'p' styles due to higher specificity.
+- Paragraph C receives styles from the id selector (#warning) which overrides 'p' due to high specificity.
+- Paragraph D receives styles from all rules, but the combined selector (#warning.info) has the highest specificity.
+
+2. Paragraph D values:
+- Color: Browser uses 'darkorange' from #warning.info because it combines an ID and a class, giving it the highest specificity score.
+- Font-family: Browser uses 'Courier New', monospace from #warning. This is because #warning.info does not declare a font-family, so it falls back to the next most specific rule that does.
+
+3. External vs Internal h1:
+If an internal CSS rule in the <head> sets a color for an h1, and an external style.css sets a different color, the internal rule will win. This is because the internal <style> tag is read last in the cascade (if placed below the <link> tag) and therefore overrides the external sheet.
