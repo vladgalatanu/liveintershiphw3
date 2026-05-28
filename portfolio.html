@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Vlad Galatanu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css"> </head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+        <img src="profile.jpg" alt="Photo of Vlad Galatanu" loading="lazy">
+        <h1>Vlad Galatanu - Career Dashboard</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+            <li><a href="data.html">Tracker</a></li>
+            <li><a href="contact.html">Log</a></li>
+            <li><a href="card.html">Card</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <section class="form-wrapper">
+            <h2>Submit a New Project</h2>
+            <form id="project-form" novalidate>
+                <fieldset>
+                    <legend>Project Details</legend>
+
+                    <div class="input-group">
+                        <label for="proj-name">Project Name <span aria-hidden="true">*</span></label>
+                        <input type="text" id="proj-name" name="projName" aria-describedby="name-error" required>
+                        <span id="name-error" class="error-text" aria-live="polite"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="proj-desc">Description <span aria-hidden="true">*</span></label>
+                        <textarea id="proj-desc" name="projDesc" rows="4" aria-describedby="desc-error" required></textarea>
+                        <span id="desc-error" class="error-text" aria-live="polite"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="proj-url">Project URL (GitHub/Live) <span aria-hidden="true">*</span></label>
+                        <input type="url" id="proj-url" name="projUrl" placeholder="https://github.com/..." aria-describedby="url-error" required>
+                        <span id="url-error" class="error-text" aria-live="polite"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="proj-tech">Primary Technology <span aria-hidden="true">*</span></label>
+                        <select id="proj-tech" name="projTech" aria-describedby="tech-error" required>
+                            <option value="" disabled selected>Select a technology...</option>
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Cyber Security">Cyber Security</option>
+                            <option value="Cisco Networking">Cisco Networking</option>
+                            <option value="SQL">SQL</option>
+                        </select>
+                        <span id="tech-error" class="error-text" aria-live="polite"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="proj-date">Completion Date <span aria-hidden="true">*</span></label>
+                        <input type="date" id="proj-date" name="projDate" aria-describedby="date-error" required>
+                        <span id="date-error" class="error-text" aria-live="polite"></span>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn-primary">Add Project</button>
+                        <button type="reset" class="btn-secondary">Reset Form</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="table-wrapper">
+            <h2>Portfolio Projects</h2>
+            <div class="responsive-table-container">
+                <table id="projects-table">
+                    <caption>Log of completed personal and academic projects</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Project Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">Technology</th>
+                            <th scope="col">Date Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projects-tbody">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 Vlad Galatanu - Internship & Jobs Dashboard</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* Accessibility: Skip Link */
+.skip-link {
+     position: absolute;
+     top: -40px;
+     left: 0;
+     background: #032a6e;
+     color: white;
+     padding: 10px;
+     z-index: 100;
+     text-decoration: none;
+     font-weight: bold;
+     transition: top 0.3s ease;
+ }
+ .skip-link:focus {
+     top: 0;
+ }
+ 
+ /* Form Layout */
+ .form-wrapper {
+     background-color: #ffffff;
+     padding: 20px;
+     border-radius: 12px;
+     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+     margin-bottom: 40px;
+ }
+ .input-group {
+     margin-bottom: 20px;
+ }
+ .error-text {
+     display: block;
+     color: #d32f2f;
+     font-size: 0.9rem;
+     font-weight: bold;
+     margin-top: 5px;
+     min-height: 20px; /* Prevents layout shifting */
+ }
+ 
+ /* Accessible Error States */
+ input[aria-invalid="true"], 
+ select[aria-invalid="true"], 
+ textarea[aria-invalid="true"] {
+     border-color: #d32f2f;
+     background-color: #fff5f5;
+     outline: 2px solid #d32f2f;
+ }
+ 
+ /* Buttons */
+ .btn-group {
+     display: flex;
+     gap: 15px;
+     margin-top: 15px;
+ }
+ .btn-primary, .btn-secondary {
+     padding: 12px 25px;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     font-weight: bold;
+     font-size: 1rem;
+     transition: opacity 0.3s;
+ }
+ .btn-primary { background-color: #032a6e; color: #fff; }
+ .btn-primary:hover { opacity: 0.9; }
+ .btn-secondary { background-color: #dfe6e9; color: #333; }
+ .btn-secondary:hover { background-color: #b2bec3; }
+ 
+ /* Responsive Table Setup */
+ .responsive-table-container {
+     overflow-x: auto;
+     -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+     border-radius: 10px;
+     background: #fff;
+ }
+ #projects-table {
+     width: 100%;
+     min-width: 600px; /* Forces scroll on small screens */
+     margin: 0;
+ }
+ #projects-table th, #projects-table td {
+     border-bottom: 1px solid #dfe6e9;
+     padding: 15px;
+ }
+ #projects-table a {
+     color: #032a6e;
+     font-weight: bold;
+     text-decoration: underline;
+ }
